@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!---bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        
+        <!--folha de estilos-->
+        <link id="estilo_css" rel="stylesheet" href="css/css.css">
+    
+    
+        <title>Telecall</title>
+        <link rel="icon" type="image/png" href="img/icone.png" />
+        
+</head>
+<body id="body_cadastro">
+        <!--------------------------------------------------------------------     header    ---------------------------------------------  ----------------------------------------------------------------->
+        <header>
+            <a id="logo_header" href="index.html"><img id="logo_header_img"src="img/logo sem fundo.png"></a>
+            <nav id="nav">
+              
+              <ul id="menu" role="menu">
+                <li><a href="2FA.html">2FA</a></li>
+                <li><a href="numero_mascara.html">Número Máscara</a></li>
+                <li><a href="google_verified.html">Google Verified Calls</a></li>
+                <li><a href="sms.html">SMS Programável</a></li>
+              </ul>
+              <a href="login.html" class="itens_menu" id="area_cliente">
+                <svg id="icone_area_cliente"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+                <div id="text_area_cliente">Área do cliente</div>
+              </a>
+              
+              
+              <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                <span id="hamburger"></span>
+              </button>
+              <button id="darck_mode" onclick="darck_mode()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+              </svg></button>
+            </nav>
+      </header>
+   
+   
+        <!--------------------------------------------------------------------     main     -------------------------------------------   ----------------------------------------------------------------->
+    <main>
+
+        <form action="login.html" method="post" name=cadastro id="cadastro">
+      
+            <h3>Preencha os campos abaixo para cadastrar-se</h3> <br> 
+            <div class="container" name="campos_cadastro" id="campos_cadastro">
+                <label for="nome">Nome</label><br>
+                <input class="campos_obrigatorios" type="text" id="nome" name="nome" ><br>
+                <span class="span" id="span_nome">*mensagem!</span><br><br>      
+                
+                <label for="nomemae">Nome materno</label><br>
+                <input class="campos_obrigatorios" type="text" id="nomemae" name="nomemae"><br> 
+                <span class="span" id="span_nomemae">*mensagem!</span><br><br>
+                
+                <label for="datanasci">Data de nascimento</label><br>
+                <input class="campos_obrigatorios" type="date" id="datanasci" name="datanasci"><br>
+                <span class="span" id="span_datanasci">*mensagem!</span><br><br>
+              
+
+                <label  id= "titulo_sexo" type="text">Sexo: </label>
+                    <input  class="radio" type="radio"  name="sexo" value="Feminino">
+                    <label for="feminino">Feminino</label>
+                    
+                    <input class="radio"type="radio"  name="sexo" value="Masculino">
+                    <label for="masculino">Masculino</label>
+
+                    <input class="radio"type="radio"  name="sexo" value="Outros">
+                    <label for="outros">Outros</label><br>
+                    <span class="span" id="span_sexo">*mensagem!</span><br><br> 
+                    
+                    
+                <label for="cpf">CPF</label><br>
+                <input class="campos_obrigatorios" type="text"id="cpf"name="cpf" autocomplete="oof" placeholder="xxx.xxx.xxx-xx"><br>
+                <span class="span" id="span_cpf">*mensagem!</span><br><br>
+
+                <label for="tel_fixo">Telefone fixo</label><br>
+                <input class="campos_obrigatorios" type="tel" name="tel_fixo" id="tel_fixo" placeholder="+xx (xx) xxxx-xxxx"><br>
+                <span class="span" id="span_tel_fixo">*mensagem!</span><br><br>
+
+                <label for="tel_cel">Telefone celular</label><br>
+                <input class="campos_obrigatorios" type="tel" name="tel_cel" id="tel_cel"  placeholder="+xx (xx) xxxx-xxxx"><br>
+                <span class="span" id="span_tel_cel">*mensagem!</span><br><br>
+
+                <label for="CEP">CEP</label><br>
+                <input class="campos_obrigatorios" type="text" id="CEP" name="CEP" size="10" placeholder="xxxxx-xx" onblur="pesquisacep(this.value);"><br>
+                <span class="span" id="span_CEP">*mensagem!</span><br><br>
+
+                <label for="UF">UF</label><br>
+                <select class="campos_obrigatorios" id="UF" name="UF">
+                  <option value="">Selecione</option>
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ">RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+               </select><br><br>
+
+                <label for="cidade">Cidade</label><br>
+                <input class="campos_obrigatorios" type="text" id="cidade" name="cidade"><br>
+                <span class="span" id="span_cidade">*mensagem!</span><br><br>
+
+                <label for="bairro">Bairro</label><br>
+                <input class="campos_obrigatorios" type="text" id="bairro" name="bairro"><br>
+                <span class="span" id="span_bairro">*mensagem!</span><br><br>
+
+                <label for="rua">Rua</label><br>
+                <input class="campos_obrigatorios" name="rua" id="rua"  ></input><br>
+                <span class="span" id="span_rua">*mensagem!</span><br><br>
+
+
+                <label for="numero_entrada">Número</label><br>
+                <input class="campos_obrigatorios" type="text" id="numero_entrada" name="numero_entrada"><br>
+                <span class="span" id="span_numero_entrada">*mensagem!</span><br><br>
+
+                <label for="complemento">Complemento</label><br>
+                <input type="text" id="complemento" name="complemento"><br>
+                <span class="span" id="span_complemento">*mensagem!</span><br><br>
+                
+                <label for="email">E-mail</label><br>
+                <input class="campos_obrigatorios" type="text"id="email"name="email" placeholder="xx@xx.xx"><br>
+                <span class="span" id="span_email">*mensagem!</span><br><br><br>
+
+                <label for="login">Cadastre o login de usuário</label><br>
+                <input class="campos_obrigatorios" type="text" name="login" id="login"><br>
+                <span class="span" id="span_login">*mensagem!</span><br><br>
+                
+                <label for="senha">Senha</label><br>
+                <input class="campos_obrigatorios" type="password" name="senha" id="senha" > <br>
+                <span class="span" id="span_senha">*mensagem!</span>
+                <h6 id="inf_senha"> (Deve conter de 8 a 15 caracteres com uma combinação de letras maiúsculas, minúsculas, números e símbolos)</h6><br><br>
+
+                
+                <label for="confsenha">Confirme a senha</label><br>
+                <input class="campos_obrigatorios" type="password" name="confsenha" id="confsenha"><br>
+                <span class="span" id="span_confsenha">*mensagem!</span><br><br>
+            </div><br>
+
+            <div class="botoescontainer">
+            <button class="botoes_cadastro"type="submit"name='botaocadastrar' id= 'botaocadastrar'>Cadastrar</button>
+            <button class="botoes_cadastro"name= 'botaolimpar' id='botaolimpar' type="reset">Limpar</button>
+            </div>
+        
+        </form>
+       
+       
+    </main>  
+    <script src="js/script_navbar.js"> </script>
+    <script src="js/script_validar_cadastro.js"> </script>
+</body>
+</html>
