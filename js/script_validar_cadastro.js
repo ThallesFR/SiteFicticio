@@ -571,7 +571,7 @@ var darck_data="desativado"
     }
     else{
   id("estilo_css").href="css/css.css";
-  id('logo_header_img').src="img/logo sem fundo.png";
+  id('logo_header_img').src="img/logo_sem_fundo.png";
     darck_data="desativado"
     localStorage.setItem("darck_mode",darck_data)
     }
