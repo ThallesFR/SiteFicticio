@@ -102,7 +102,7 @@ if(darck_storage!="desativado"){
     }
     else{
     document.getElementById("estilo_css").href="css/css.css";
-    document.getElementById('logo_header_img').src="img/logo sem fundo.png";
+    document.getElementById('logo_header_img').src="img/logo_sem_fundo.png";
     darck_data="desativado"
     localStorage.setItem("darck_mode",darck_data)
     }
