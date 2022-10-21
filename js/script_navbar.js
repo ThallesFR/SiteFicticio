@@ -37,7 +37,7 @@ function darck_mode(){
   }
 
   else{document.getElementById("estilo_css").href="css/css.css";
-  document.getElementById('logo_header_img').src="img/logo sem fundo.png";
+  document.getElementById('logo_header_img').src="img/logo_sem_fundo.png";
   darck_data="desativado"
   localStorage.setItem("darck_mode",darck_data)
  
@@ -57,7 +57,7 @@ window.onload= function(){//////////////////// (usa o CSS salvo ao abrir a janel
 
   else{
   document.getElementById("estilo_css").href="css/css.css";
-  document.getElementById('logo_header_img').src="img/logo sem fundo.png";
+  document.getElementById('logo_header_img').src="img/logo_sem_fundo.png";
   darck_data="desativado"
   localStorage.setItem("darck_mode",darck_data)
   }
